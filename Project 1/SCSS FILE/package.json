@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "Jyoti",
   "version": "1.0.0",
   "description": "Langing page for Project",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "author": "Jyoti",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^9.0.0"
   }
 }
