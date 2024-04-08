@@ -1,0 +1,29 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $black-color;
+  padding: 3rem;
+}
+.header_main {
+  color: $white-color;
+  backface-visibility: hidden;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  &_first {
+    display: block;
+    font-size: 3.7rem;
+    font-weight: 800;
+    letter-spacing: 0.85em;
+    animation: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  &_second {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 0.56em;
+    font-weight: 700;
+    animation: moveInRight 1s ease-out;
+  }
+}
