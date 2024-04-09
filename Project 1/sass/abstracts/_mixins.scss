@@ -1,0 +1,7 @@
+@mixin clearfix {
+  &::after {
+    contain: " ";
+    display: table;
+    clear: both;
+  }
+}
