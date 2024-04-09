@@ -55,17 +55,17 @@ body {
   margin-bottom: 6rem; }
   .heading_main_first {
     display: block;
-    font-size: 3.7rem;
+    font-size: 4.7rem;
     font-weight: 800;
-    letter-spacing: 0.85em;
+    letter-spacing: 1rem;
     animation: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
   .heading_main_second {
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 0.56em;
-    font-weight: 700;
+    font-weight: 500;
     animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
@@ -155,7 +155,8 @@ body {
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid rgba(17, 17, 107, 0.918);
-  margin-bottom: 5rem; }
+  margin-bottom: 2rem;
+  margin-top: 1rem; }
 
 .btn-text:hover {
   color: #fff;
@@ -166,6 +167,33 @@ body {
 .btn-text:active {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition_photo {
+    width: 55%;
+    position: absolute;
+    border-radius: 2px;
+    z-index: 10;
+    transition: all 0.2s;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    outline-offset: 2rem; }
+    .composition_photo_p1 {
+      left: 0;
+      top: -2rem; }
+    .composition_photo_p2 {
+      left: 20rem;
+      top: 2rem; }
+    .composition_photo_p3 {
+      left: 8%;
+      top: 15rem; }
+    .composition_photo:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(18, 152, 197, 0.5);
+      z-index: 20;
+      outline: 1.5rem solid rgba(18, 152, 197, 0.87); }
+  .composition:hover .composition_photo:not(:hover) {
+    transform: scale(0.9); }
 
 /* Layout*/
 .grid-test {
