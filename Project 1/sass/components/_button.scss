@@ -6,7 +6,7 @@
     text-transform: uppercase;
     padding: 1.2rem 2rem;
     position: relative;
-    font-size: 1.5rem;
+    font-size: $default-font-size;
     letter-spacing: 0.2rem;
   }
   &:hover {
@@ -44,5 +44,27 @@
   &-animation {
     animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards;
+  }
+}
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    padding: 3px;
+    color: $mideum-darkblue;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $mideum-darkblue;
+    margin-bottom: 5rem;
+  }
+  &:hover {
+    color: $white-color;
+    background-color: $mideum-darkblue;
+    box-shadow: 0 1rem 2rem rgba($black-color, 0.15);
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: 0 1rem 2rem rgba($black-color, 0.15);
+    transform: translateY(0);
   }
 }
