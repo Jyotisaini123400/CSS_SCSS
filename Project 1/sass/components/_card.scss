@@ -7,7 +7,7 @@
   &_side {
     background-color: white;
     height: 40rem;
-    transition: all 0.8s;
+    transition: all 0.8s ease;
     font-size: 5rem;
     color: $white-color;
     position: absolute;
@@ -16,7 +16,8 @@
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 0.5rem 4rem rgba($black-color);
+    overflow: hidden;
+    box-shadow: 0 0.5rem 4rem rgba($black-color, 0.15);
 
     &-front {
       background-color: white;
@@ -38,5 +39,28 @@
   }
   &:hover &_side-back {
     transform: rotateY(0);
+  }
+  ///Front side styling
+  &_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &-1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-light-yellow,
+          $color-dark-yellow
+        ),
+        url(../img/features.jpeg);
+    }
+    &-2 {
+      background-image: url(../img/features.jpeg);
+    }
+    &-3 {
+      background-image: url(../img/features.jpeg);
+    }
   }
 }
