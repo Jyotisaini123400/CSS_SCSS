@@ -2,13 +2,11 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 40rem;
+  height: 45rem;
 
   &_side {
-    background-color: white;
-    height: 40rem;
+    height: 45rem;
     transition: all 0.8s ease;
-    font-size: 5rem;
     color: $white-color;
     position: absolute;
     top: 0;
@@ -61,6 +59,47 @@
     }
     &-3 {
       background-image: url(../img/features.jpeg);
+    }
+  }
+  &_heading {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $white-color;
+    position: absolute;
+    top: 11rem;
+    left: 11rem;
+    text-align: right;
+    width: 65%;
+  }
+  &_heading_span {
+    padding: 1rem 1.5rem;
+    -webkit-box-direction-break: clone;
+    box-decoration-break: clone;
+    &__1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-yellow, 0.85),
+        rgba($color-dark-yellow, 0.85)
+      );
+    }
+  }
+  &_details {
+    padding: 3rem;
+    ul {
+      width: 80%;
+      margin: auto;
+      list-style: none;
+      li {
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: black;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-light-grey;
+        }
+      }
     }
   }
 }
