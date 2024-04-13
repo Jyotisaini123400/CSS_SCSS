@@ -4,14 +4,20 @@
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
+    transition: all 0.2s;
     padding: 1.2rem 2rem;
     position: relative;
     font-size: $default-font-size;
     letter-spacing: 0.2rem;
+    border-radius: 10rem;
   }
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($light-black, 0.527);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
   &:active {
     transform: translateY(-0.2rem);
@@ -20,17 +26,17 @@
   &-white {
     color: $black-color;
     background-color: $white-color;
-    border-radius: 4rem;
     &::after {
-      background-color: $white-color;
+      background-color: $color-light-grey;
     }
   }
   &::after {
     display: inline-block;
-    contain: " ";
+    contain: "";
     height: 100%;
     width: 100%;
     border-radius: 10rem;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
@@ -38,6 +44,13 @@
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
+    }
+  }
+  &-green {
+    color: $white-color;
+    background-color: $blue-color;
+    &::after {
+      background-color: $blue-color;
     }
   }
 
