@@ -18,12 +18,36 @@
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
   }
   &_persion-1 {
     height: 100%;
-    background-size: cover;
+    transform: translateX(-4rem);
+    backface-visibility: hidden;
+    transition: all 0.5s;
   }
   &-text {
     transform: skewX(12deg);
+  }
+  &_caption {
+    font-size: 1.7rem;
+    color: $white-color;
+    font-weight: 600;
+    left: 50%;
+    top: 50%;
+    text-transform: uppercase;
+    transform: translate(-50%, 20%);
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  &:hover &_caption {
+    opacity: 1;
+    transform: translateX(-50%, 50%);
+  }
+  &:hover &_persion-1 {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }
