@@ -1,7 +1,7 @@
 .story {
   width: 75%;
   box-shadow: 0 3rem 6rem rgba($black-color, 0.1);
-  background-color: $white-color;
+  background-color: rgba($white-color, 0.6);
   border-radius: 3px;
   margin: 0 auto;
   font-size: $default-font-size;
@@ -22,7 +22,7 @@
   }
   &_persion-1 {
     height: 100%;
-    transform: translateX(-4rem);
+    transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
     transition: all 0.5s;
   }
