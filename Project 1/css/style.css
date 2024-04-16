@@ -99,25 +99,25 @@ body {
     margin-bottom: 0.3rem; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.2rem;
-  margin-top: 2rem; }
+  margin-bottom: 1.2rem !important;
+  margin-top: 2rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-top-big {
-  display: inline-block;
-  margin-top: 5rem;
-  margin-left: 40%; }
+  display: inline-block !important;
+  margin-top: 5rem !important;
+  margin-left: 40% !important; }
 
 .u-margin-top-huge {
-  margin-top: 10rem; }
+  margin-top: 10rem !important; }
 
 /* Components*/
 .bg_video {
@@ -134,7 +134,7 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -143,7 +143,9 @@ body {
   position: relative;
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
-  border-radius: 10rem; }
+  border-radius: 10rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -152,7 +154,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-0.2rem);
   box-shadow: 0 0.5rem 1rem rgba(206, 198, 198, 0.2); }
 
@@ -177,10 +179,10 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn-green {
+.btn-blue {
   color: #fff;
   background-color: rgba(18, 152, 197, 0.87); }
-  .btn-green::after {
+  .btn-blue::after {
     background-color: rgba(18, 152, 197, 0.87); }
 
 .btn-animation {
@@ -364,7 +366,8 @@ body {
   font-family: inherit;
   border-bottom: 3px solid transparent;
   width: 100%;
-  display: block; }
+  display: block;
+  transition: all 0.3s; }
   .form_input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -386,6 +389,42 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.form_radio_group {
+  width: 49%;
+  display: inline-block; }
+
+.form_radio_lable {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form_radio_button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #0066ff;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  left: -2.4rem;
+  top: -0.8rem; }
+  .form_radio_button::after {
+    height: 1.3rem;
+    width: 1.3rem;
+    contain: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0066ff;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+.form_radio_input:checked + .form_radio_lable .form_radio_button::after {
+  opacity: 1; }
 
 .story {
   width: 75%;
