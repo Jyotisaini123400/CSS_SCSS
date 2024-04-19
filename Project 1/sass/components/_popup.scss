@@ -6,6 +6,7 @@
   left: 0;
   z-index: 9999;
   position: fixed;
+
   &_content {
     @include absCenter;
 
@@ -16,6 +17,10 @@
     display: table;
     overflow: hidden;
   }
+  //   &_cut {
+  //     top: 0;
+  //     left: 0;
+  //   }
   &_left {
     width: 33.333333%;
     display: table-cell;

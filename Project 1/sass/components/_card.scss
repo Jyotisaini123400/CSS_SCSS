@@ -1,5 +1,5 @@
 .card {
-  perspective: 150rem;
+  perspective: 140rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 45rem;
@@ -96,9 +96,9 @@
     color: $white-color;
     position: absolute;
     top: 11rem;
-    left: 11rem;
+    left: 9rem;
     text-align: right;
-    width: 65%;
+    width: 66%;
   }
   &_heading_span {
     padding: 1rem 1.5rem;

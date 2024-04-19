@@ -1,15 +1,18 @@
 .feature-box {
+  overflow: hidden;
   background-color: rgba($white-color, 0.8);
   font-size: 1.5rem;
-  left: 0.3rem;
+  left: -3rem;
   text-align: center;
   padding: 2rem;
+  margin-left: -2rem;
   border-radius: 0.3rem;
   margin-top: -14rem;
   box-shadow: 0 1.5rem 3rem rgba($black-color, 0.15);
   transition: all 0.3s;
+  font-size: 1.2rem;
   &_icon {
-    font-size: 15rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     display: inline-block;
     background-image: linear-gradient(to right, $mideum-darkblue, $blue-color);
@@ -19,6 +22,4 @@
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
   }
-  //   &_text {
-  //   }
 }

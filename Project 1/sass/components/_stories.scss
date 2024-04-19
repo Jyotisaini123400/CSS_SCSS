@@ -5,7 +5,7 @@
   border-radius: 3px;
   margin: 0 auto;
   font-size: $default-font-size;
-  padding: 6rem;
+  padding: 3rem;
   padding-left: 9rem;
   transform: skewX(-12deg);
   &_shape {
@@ -30,7 +30,7 @@
     transform: skewX(12deg);
   }
   &_caption {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     color: $white-color;
     font-weight: 600;
     left: 50%;

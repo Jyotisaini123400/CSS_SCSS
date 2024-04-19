@@ -43,6 +43,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -58,10 +70,10 @@ body {
   color: #fff;
   backface-visibility: hidden;
   text-transform: uppercase;
-  margin-bottom: 6rem; }
+  margin-bottom: 2rem; }
   .heading_main_first {
     display: block;
-    font-size: 4.7rem;
+    font-size: 3.7rem;
     font-weight: 800;
     letter-spacing: 1rem;
     animation: moveInLeft;
@@ -69,15 +81,15 @@ body {
     animation-timing-function: ease-out; }
   .heading_main_second {
     display: block;
-    font-size: 2rem;
+    font-size: 1.2rem;
     letter-spacing: 0.56em;
     font-weight: 500;
     animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   display: inline-block;
   background-image: linear-gradient(to right, rgba(17, 17, 107, 0.918), rgba(18, 152, 197, 0.87));
   background-clip: text;
@@ -89,12 +101,12 @@ body {
     text-shadow: 0.5rem 1rem 2rem black; }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase; }
 
 .paragraph {
-  font-size: 1.5rem; }
+  font-size: 1.1rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 0.3rem; }
 
@@ -143,9 +155,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.2s;
-  padding: 1.2rem 2rem;
+  padding: 1rem 0.8rem;
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 0.2rem;
   border-radius: 10rem;
   border: none;
@@ -214,7 +226,7 @@ body {
   transform: translateY(0); }
 
 .card {
-  perspective: 150rem;
+  perspective: 140rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 45rem; }
@@ -266,9 +278,9 @@ body {
     color: #fff;
     position: absolute;
     top: 11rem;
-    left: 11rem;
+    left: 9rem;
     text-align: right;
-    width: 65%; }
+    width: 66%; }
   .card_heading_span {
     padding: 1rem 1.5rem;
     -webkit-box-direction-break: clone;
@@ -338,17 +350,20 @@ body {
     transform: scale(0.9); }
 
 .feature-box {
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
-  left: 0.3rem;
+  left: -3rem;
   text-align: center;
   padding: 2rem;
+  margin-left: -2rem;
   border-radius: 0.3rem;
   margin-top: -14rem;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  font-size: 1.2rem; }
   .feature-box_icon {
-    font-size: 15rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     display: inline-block;
     background-image: linear-gradient(to right, rgba(17, 17, 107, 0.918), rgba(18, 152, 197, 0.87));
@@ -361,8 +376,8 @@ body {
   margin-bottom: 2rem; }
 
 .form_input {
-  font-size: 1.5rem;
-  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
+  padding: 1.3rem 1.2rem;
   border-radius: 2px;
   color: inherit;
   background-color: rgba(255, 255, 255, 0.9);
@@ -382,8 +397,8 @@ body {
     color: #999; }
 
 .form_lable {
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 500;
   margin-left: 2rem;
   margin-top: 0.7rem;
   display: block;
@@ -395,24 +410,24 @@ body {
   transform: translateY(-4rem); }
 
 .form_radio_group {
-  width: 49%;
+  width: 44%;
   display: inline-block; }
 
 .form_radio_lable {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   position: relative;
-  padding-left: 4.5rem; }
+  padding-left: 1.1rem; }
 
 .form_radio_button {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   border: 5px solid #0066ff;
   border-radius: 50%;
   position: absolute;
   display: inline-block;
-  left: -2.4rem;
-  top: -0.8rem; }
+  left: -1.9rem;
+  top: -0.55rem; }
   .form_radio_button::after {
     height: 1.3rem;
     width: 1.3rem;
@@ -462,10 +477,16 @@ body {
   .popup_text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid #c2c1c1;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid #c2c1c1;
-    hyphens: auto; }
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto; }
 
 .story {
   width: 75%;
@@ -474,7 +495,7 @@ body {
   border-radius: 3px;
   margin: 0 auto;
   font-size: 1.6rem;
-  padding: 6rem;
+  padding: 3rem;
   padding-left: 9rem;
   transform: skewX(-12deg); }
   .story_shape {
@@ -496,7 +517,7 @@ body {
   .story-text {
     transform: skewX(12deg); }
   .story_caption {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     color: #fff;
     font-weight: 600;
     left: 50%;
@@ -517,7 +538,7 @@ body {
 /* Layout*/
 .footer {
   background-color: #2b2a2a;
-  padding: 5rem 0 15rem 0;
+  padding: 4rem 0 18rem 0;
   font-size: 1.4rem;
   text-align: center; }
   .footer_logo-box {
@@ -553,7 +574,7 @@ body {
     margin-bottom: 5rem; }
 
 .grid-test {
-  margin-bottom: 400px; }
+  margin-bottom: 40rem; }
 
 .row {
   max-width: 114rem;
@@ -590,8 +611,8 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
   .header_logo {
     position: absolute;
-    top: 10rem;
-    left: 10rem; }
+    top: 5rem;
+    left: 8rem; }
   .header_logo_img {
     background-size: cover;
     width: 12rem;
@@ -600,19 +621,20 @@ body {
     position: absolute;
     text-align: center;
     left: 52%;
-    top: 52%;
+    top: 53%;
     transform: translate(-50%, -50%); }
 
 .navigation_checkbox1 {
   display: none; }
 
 .navigation_button {
+  position: absolute;
   background-color: #fff;
   height: 6rem;
   width: 6rem;
   position: fixed;
-  top: 6rem;
-  left: 6rem;
+  top: 4rem;
+  left: 4rem;
   border-radius: 50%;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   z-index: 2000;
@@ -620,12 +642,13 @@ body {
   cursor: pointer; }
 
 .navigation_background {
-  height: 6rem;
-  width: 6rem;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   position: fixed;
-  top: 6rem;
-  left: 6rem;
+  top: 4rem;
+  left: 4rem;
   background-image: radial-gradient(#6666b6, #355cd3);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -662,7 +685,7 @@ body {
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   padding: 1rem 2rem;
   background-size: 230%;
-  transition: all 0.4s; }
+  transition: all 0.2s; }
   .navigation_link:link span, .navigation_link:visited span {
     margin-right: 1.5rem;
     display: inline-block; }
@@ -674,7 +697,6 @@ body {
 
 .navigation_nav:hover {
   background-image: radial-gradient(#6666b6, #355cd3);
-  padding: 5rem auto;
   opacity: 1;
   width: 100%; }
 
@@ -705,13 +727,13 @@ body {
 /* Pages*/
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
-  margin-top: -20rem; }
+  padding: 19rem 0;
+  margin-top: -15rem; }
 
 .section-features {
   background-color: #f7f7f7;
-  padding: 22rem 0;
-  margin-top: 15rem;
+  padding: 20rem 0;
+  margin-top: 30rem;
   background-image: linear-gradient(to top left, rgba(17, 17, 107, 0.699), rgba(18, 152, 197, 0.705)), url(../img/header1.jpg);
   background-size: cover;
   transform: skewY(-7deg); }
@@ -724,20 +746,20 @@ body {
 
 .section-stories {
   position: relative;
-  padding: 18rem 0 0; }
+  padding: 1rem 0 0; }
 
 .section-booking {
-  padding: 15rem 0;
+  padding: 15rem 4rem 7rem;
   background-image: linear-gradient(to left bottom, rgba(17, 17, 107, 0.699), rgba(18, 152, 197, 0.705)); }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/book.webp);
   width: 100%;
-  height: 50rem;
+  height: 55rem;
   border-radius: 3px;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
   .book_form {
-    padding: 6rem;
+    padding: 7rem;
     width: 50%; }
