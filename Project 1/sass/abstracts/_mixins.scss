@@ -1,6 +1,6 @@
 @mixin clearfix {
   &::after {
-    contain: " ";
+    contain: "";
     display: table;
     clear: both;
   }
@@ -21,6 +21,7 @@
 
 @mixin respond-phone {
   @media (max-width: 600px) {
+    @content;
   }
 }
 

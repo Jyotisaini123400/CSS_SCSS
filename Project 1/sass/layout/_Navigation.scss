@@ -6,11 +6,11 @@
   &_button {
     position: absolute;
     background-color: $white-color;
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 4rem;
     position: fixed;
-    top: 4rem;
-    left: 4rem;
+    top: 3rem;
+    left: 3rem;
     border-radius: 50%;
     box-shadow: 0 1rem 3rem rgba($black-color, 0.1);
     z-index: 2000;
@@ -20,15 +20,16 @@
 
   &_background {
     position: relative;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
     position: fixed;
-    top: 4rem;
-    left: 4rem;
+    top: 3rem;
+    left: 3rem;
     background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
     // transform: scale(100);
   }
   &_nav {
@@ -94,21 +95,24 @@
   // &_checkbox1:hover,
   &_nav:hover {
     background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
-
     opacity: 1;
     width: 100%;
+    @include respond(Tab-port) {
+      position: absolute;
+      font-size: 1.3em;
+    }
   }
 
   //////////////
   //   /// navigation icon
   &_icon {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 2rem;
     &,
     &::before,
     &::after {
-      width: 3rem;
-      height: 2px;
+      width: 1.5rem;
+      height: 1px;
       background-color: rgb(68, 67, 67);
       display: inline-block;
     }

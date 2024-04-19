@@ -15,14 +15,20 @@ html {
     font-size: 50%;
   }
 
-  @include respond(phone) {
-    font-size: 30%;
-  }
+  // @include respond(phone) {
+  //   font-size: 30%;
+  // }
 
   @include respond(Big-desktop) {
     font-size: 75%;
   }
 }
 body {
+  padding: 3rem;
+  overflow-x: hidden;
+
   box-sizing: border-box;
+  @include respond(Tab-port) {
+    padding: 0;
+  }
 }

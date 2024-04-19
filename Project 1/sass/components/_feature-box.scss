@@ -3,14 +3,22 @@
   background-color: rgba($white-color, 0.8);
   font-size: 1.5rem;
   left: -3rem;
+  width: 20rem;
   text-align: center;
   padding: 2rem;
-  margin-left: -2rem;
+  margin-left: 2rem;
   border-radius: 0.3rem;
   margin-top: -14rem;
   box-shadow: 0 1.5rem 3rem rgba($black-color, 0.15);
   transition: all 0.3s;
   font-size: 1.2rem;
+  @include respond(Tab-port) {
+    width: 28rem;
+    display: inline-block;
+    margin-top: -1rem;
+    margin-left: 10rem;
+  }
+
   &_icon {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;

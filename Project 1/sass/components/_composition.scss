@@ -1,5 +1,8 @@
 .composition {
   position: relative;
+  @include respond(Tap-port) {
+    margin-top: -5rem;
+  }
   &_photo {
     width: 55%;
     position: absolute;
@@ -9,16 +12,16 @@
     box-shadow: 0 1.5rem 4rem rgba($black-color, 0.4);
     outline-offset: 2rem;
     &_p1 {
-      left: 0;
-      top: -2rem;
+      left: 4rem;
+      top: -4rem;
     }
     &_p2 {
-      left: 10rem;
+      left: 18rem;
       top: 2rem;
     }
     &_p3 {
-      left: 8%;
-      top: 10rem;
+      left: 6rem;
+      top: 6rem;
     }
     &:hover {
       transform: scale(1.05) translateY(-0.5rem);

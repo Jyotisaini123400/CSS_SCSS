@@ -1,18 +1,34 @@
-.grid-test {
-  margin-bottom: 40rem;
-}
+// .grid-test {
+//   margin-bottom: 40rem;
+// }
 .row {
   max-width: $grid-width;
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respond(Tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
+
+  @include respond(Tab-port) {
+    max-width: 50rem;
+    margin-top: -2rem;
+  }
+
   @include clearfix;
 
   [class^="col-"] {
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(Tab-port) {
+        margin-left: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+    @include respond(Tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {

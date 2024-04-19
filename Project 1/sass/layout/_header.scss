@@ -10,11 +10,25 @@
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  @include respond(phone) {
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+  @include respond(Tap-port) {
+    background-size: cover;
+    width: 100vw;
 
+    text-align: center;
+  }
   &_logo {
     position: absolute;
     top: 5rem;
     left: 8rem;
+    @include respond(Tab-port) {
+      top: 2rem;
+      left: 2rem;
+    }
   }
   &_logo_img {
     background-size: cover;
