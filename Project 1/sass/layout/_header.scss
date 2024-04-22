@@ -8,16 +8,21 @@
     url(../img/header2.avif);
   background-position: top;
   background-size: cover;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
   @include respond(phone) {
+    height: 65vh;
     background-size: cover;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
   }
   @include respond(Tap-port) {
     background-size: cover;
+    height: 80vh;
     width: 100vw;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
 
     text-align: center;
   }
@@ -40,7 +45,13 @@
     position: absolute;
     text-align: center;
     left: 52%;
-    top: 53%;
+    top: 49%;
     transform: translate(-50%, -50%);
+    @include respond(phone) {
+      top: 33%;
+    }
+  }
+  @include respond(phone) {
+    margin-top: 0rem;
   }
 }

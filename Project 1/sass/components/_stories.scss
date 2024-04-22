@@ -8,6 +8,16 @@
   padding: 3rem;
   padding-left: 9rem;
   transform: skewX(-12deg);
+  @include respond(Tab-port) {
+    font-size: 1.2rem;
+    height: 75%;
+  }
+  @include respond(phone) {
+    font-size: 0.9rem;
+    height: 45%;
+    text-align: center;
+    margin-left: 3rem;
+  }
   &_shape {
     width: 15rem;
     height: 15rem;
@@ -19,15 +29,31 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    @include respond(Tab-port) {
+      width: 10rem;
+      height: 10rem;
+    }
+    @include respond(phone) {
+      width: 5rem;
+      height: 5rem;
+      display: inline-block;
+    }
   }
   &_persion-1 {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
     transition: all 0.5s;
+    @include respond(Tab-port) {
+      height: 100%;
+    }
   }
   &-text {
     transform: skewX(12deg);
+    align-items: center;
+    @include respond(phone) {
+      margin-left: -7rem;
+    }
   }
   &_caption {
     font-size: 1.3rem;

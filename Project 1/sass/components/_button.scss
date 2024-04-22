@@ -14,6 +14,9 @@
     /////////change the button element /////
     border: none;
     cursor: pointer;
+    @include respond(phone) {
+      margin-left: -5rem;
+    }
   }
   &:hover {
     transform: translateY(-0.3rem);
@@ -33,6 +36,18 @@
     background-color: $white-color;
     &::after {
       background-color: $color-light-grey;
+    }
+    @include respond(Tab-port) {
+      width: 10rem;
+      height: 5rem;
+      font-size: 1rem;
+    }
+    @include respond(phone) {
+      width: 15rem;
+      height: 4.5rem;
+      margin-left: -3rem;
+      font-size: 0.5rem;
+      letter-spacing: 0;
     }
   }
   &::after {
@@ -54,11 +69,31 @@
   &-blue {
     color: $white-color;
     background-color: $blue-color;
+
     &::after {
       background-color: $blue-color;
     }
   }
+  &-blue-2 {
+    color: $white-color;
+    background-color: $blue-color;
 
+    &::after {
+      background-color: $blue-color;
+    }
+    @include respond(Tab-port) {
+      width: 8rem;
+      height: 2rem;
+      margin-left: -6rem;
+      font-size: 0.8rem;
+    }
+    @include respond(phone) {
+      width: 8rem;
+      height: 2.5rem;
+      margin-left: -1.3rem;
+      font-size: 0.8rem;
+    }
+  }
   &-animation {
     animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards;

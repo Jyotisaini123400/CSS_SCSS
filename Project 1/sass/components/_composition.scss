@@ -3,6 +3,10 @@
   @include respond(Tap-port) {
     margin-top: -5rem;
   }
+  @include respond(phone) {
+    margin-top: 4rem;
+    margin-left: -5rem;
+  }
   &_photo {
     width: 55%;
     position: absolute;

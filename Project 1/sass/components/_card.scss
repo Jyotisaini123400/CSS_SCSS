@@ -96,9 +96,17 @@
     color: $white-color;
     position: absolute;
     top: 11rem;
-    left: 9rem;
+    left: 7rem;
     text-align: right;
     width: 66%;
+    @include respond(Tab-port) {
+      left: 13rem;
+      width: 77%;
+    }
+    @include respond(phone) {
+      left: 5rem;
+      width: 77%;
+    }
   }
   &_heading_span {
     padding: 1rem 1.5rem;

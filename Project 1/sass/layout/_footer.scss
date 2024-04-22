@@ -4,15 +4,31 @@
   font-size: 1.4rem;
   text-align: center;
   @include respond(Tab-port) {
-    padding: 1rem 0 29rem 0;
+    padding: 6rem 0 20rem;
+    font-size: 1rem;
+  }
+  @include respond(phone) {
+    padding: 2rem 0 26rem;
+    font-size: 1rem;
   }
   &_logo-box {
     align-items: center;
+    // @include respond(Tab-port) {
+    //   margin-bottom: 6rem;
+    // }
   }
   &_logo {
-    width: 18rem;
+    width: 15rem;
     height: auto;
     background-size: cover;
+    @include respond(phone) {
+      width: 10rem;
+      margin-top: -4rem;
+    }
+    @include respond(Tab-port) {
+      width: 12rem;
+      margin-top: 2rem;
+    }
   }
 
   &_navigation {
@@ -49,11 +65,17 @@
   &_copyright {
     border-top: 1px solid whitesmoke;
     padding-top: 2rem;
-    width: 80%;
+    width: 100%;
     margin-bottom: 5rem;
     @include respond(Tab-port) {
       padding-top: 1rem;
       margin-left: 5rem;
+      margin-top: -10rem;
+    }
+    @include respond(phone) {
+      padding-top: 1rem;
+      margin-left: 0rem;
+      margin-top: -5rem;
     }
   }
 }

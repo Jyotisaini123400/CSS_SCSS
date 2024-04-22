@@ -16,6 +16,23 @@
     z-index: 2000;
     text-align: center;
     cursor: pointer;
+
+    @include respond(phone) {
+      height: 4rem;
+      width: 4rem;
+      top: 4rem;
+      left: 4rem;
+
+      position: fixed;
+    }
+    @include respond(Tab-port) {
+      height: 4rem;
+      width: 4rem;
+      top: 4rem;
+      left: 4rem;
+
+      position: fixed;
+    }
   }
 
   &_background {
@@ -29,7 +46,21 @@
     background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    @include respond(phone) {
+      height: 4rem;
+      width: 4rem;
+      top: 4rem;
+      left: 4rem;
+      position: fixed;
+    }
+    @include respond(Tab-port) {
+      height: 4rem;
+      width: 4rem;
+      top: 4rem;
+      left: 4rem;
 
+      position: fixed;
+    }
     // transform: scale(100);
   }
   &_nav {
