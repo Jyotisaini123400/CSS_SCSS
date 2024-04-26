@@ -70,7 +70,11 @@
     align-items: center;
     @include respond(phone) {
       margin-left: 2rem;
-      // transform: skewX(0);
+      transform: skewX(0deg);
+    }
+    @include respond(Tab-port) {
+      margin-left: 2rem;
+      transform: skewX(0deg);
     }
   }
   &_caption {

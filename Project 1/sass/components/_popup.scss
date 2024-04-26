@@ -12,7 +12,7 @@
   @supports (-webkit-backdrop-filter: blur(10px)) or (back-filter: blur(10px)) {
     -webkit-backdrop-filter: blur(10px);
     back-filter: blur(10px);
-    background-color: rgba($color-black, 0.3);
+    background-color: rgba($black-color, 0.3);
   }
 
   &:target {
@@ -115,7 +115,7 @@
       line-height: 1;
     }
     &:hover {
-      color: $color-primary;
+      color: red;
     }
   }
 }
