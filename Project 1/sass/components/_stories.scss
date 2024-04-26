@@ -11,6 +11,9 @@
   @include respond(Tab-port) {
     font-size: 1.2rem;
     height: 75%;
+    padding: 3rem;
+    padding-left: 6rem;
+    transform: skewX(0);
   }
   @include respond(phone) {
     font-size: 0.9rem;
@@ -32,6 +35,7 @@
     @include respond(Tab-port) {
       width: 10rem;
       height: 10rem;
+      margin-left: 3rem;
     }
     @include respond(phone) {
       width: 5rem;
@@ -41,18 +45,27 @@
   }
   &_persion-1 {
     height: 100%;
+    width: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
     transition: all 0.5s;
     @include respond(Tab-port) {
       height: 100%;
     }
+    @include respond(Tab-land) {
+      margin-left: 4rem;
+    }
+    @include respond(phone) {
+      height: 100%;
+      margin-left: 4rem;
+    }
   }
   &-text {
     transform: skewX(12deg);
     align-items: center;
     @include respond(phone) {
-      margin-left: -7rem;
+      margin-left: 2rem;
+      // transform: skewX(0);
     }
   }
   &_caption {
@@ -60,13 +73,23 @@
     color: $white-color;
     font-weight: 600;
     left: 50%;
-    top: 50%;
+    top: 45%;
     text-transform: uppercase;
     transform: translate(-50%, 20%);
     position: absolute;
     backface-visibility: hidden;
     transition: all 0.5s;
     opacity: 0;
+    @include respond(phone) {
+      font-size: 0.4rem;
+      margin-bottom: 2rem;
+      left: 50%;
+      top: 25%;
+    }
+
+    @include respond(Tab-land) {
+      font-size: 1.5rem;
+    }
   }
   &:hover &_caption {
     opacity: 1;

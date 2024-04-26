@@ -1,5 +1,7 @@
 .header {
   height: 95vh;
+  background-size: cover;
+  object-fit: cover;
   background-image: linear-gradient(
       to top left,
       rgba($mideum-darkblue, 0.699),
@@ -18,13 +20,9 @@
   }
   @include respond(Tap-port) {
     background-size: cover;
-    height: 80vh;
-    width: 100vw;
-    background-size: cover;
+    height: 95vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
-
-    text-align: center;
   }
   &_logo {
     position: absolute;
@@ -39,19 +37,26 @@
     background-size: cover;
     width: 12rem;
     mix-blend-mode: multiply;
+    @include respond(phone) {
+      width: 8rem;
+    }
   }
 
   &_text-box {
     position: absolute;
     text-align: center;
-    left: 52%;
+    left: 50%;
     top: 49%;
     transform: translate(-50%, -50%);
+    @include respond(Tab-port) {
+      left: 50%;
+      top: 50%;
+    }
     @include respond(phone) {
       top: 33%;
     }
   }
-  @include respond(phone) {
-    margin-top: 0rem;
-  }
+  // @include respond(phone) {
+  //   margin-top: 0rem;
+  // }
 }

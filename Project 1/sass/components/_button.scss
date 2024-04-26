@@ -15,7 +15,10 @@
     border: none;
     cursor: pointer;
     @include respond(phone) {
-      margin-left: -5rem;
+      margin-left: 9rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      align-items: center;
     }
   }
   &:hover {
@@ -37,19 +40,19 @@
     &::after {
       background-color: $color-light-grey;
     }
-    @include respond(Tab-port) {
-      width: 10rem;
-      height: 5rem;
-      font-size: 1rem;
-    }
     @include respond(phone) {
-      width: 15rem;
-      height: 4.5rem;
-      margin-left: -3rem;
-      font-size: 0.5rem;
-      letter-spacing: 0;
+      margin-left: 5rem;
+    }
+    @include respond(Tab-port) {
+      width: 19rem;
+      height: 4rem;
+      font-size: 1rem;
+      margin-left: 10rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
   }
+
   &::after {
     display: inline-block;
     contain: "";
@@ -69,37 +72,40 @@
   &-blue {
     color: $white-color;
     background-color: $blue-color;
+    text-align: center;
 
     &::after {
       background-color: $blue-color;
+      text-align: center;
     }
   }
   &-blue-2 {
     color: $white-color;
     background-color: $blue-color;
+    text-align: center;
 
     &::after {
       background-color: $blue-color;
+      text-align: center;
     }
     @include respond(Tab-port) {
       width: 8rem;
       height: 2rem;
-      margin-left: -6rem;
+      margin-left: 6rem;
+      margin-bottom: -3rem;
       font-size: 0.8rem;
+      text-align: center;
     }
     @include respond(phone) {
       width: 8rem;
       height: 2.5rem;
-      margin-left: -1.3rem;
+      margin-left: 5.3rem;
       font-size: 0.8rem;
     }
   }
   &-animation {
     animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards;
-    // margin-top: 1;
-    // padding: 0;
-    // background-color: red;
   }
 }
 .btn-text {

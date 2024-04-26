@@ -2,6 +2,9 @@
   text-align: center !important;
 }
 
+.u-margin-top-first {
+  margin: 0rem;
+}
 .u-margin-bottom-small {
   margin-bottom: 1.2rem !important;
   margin-top: 2rem !important;
@@ -15,7 +18,10 @@
 .u-margin-top-big {
   display: inline-block !important;
   margin-top: 5rem !important;
-  margin-left: 40% !important;
+  margin-left: 43% !important;
+  @include respond(phone) {
+    margin-left: 16% !important;
+  }
 }
 .u-margin-top-huge {
   margin-top: 10rem !important;
