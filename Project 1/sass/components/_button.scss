@@ -24,6 +24,16 @@
       padding: 0.5rem;
       height: 2rem;
     }
+    @include respond(Tab-land) {
+      margin-left: -2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 0.9rem;
+      width: 17rem;
+      padding: 0.5rem;
+      height: 2rem;
+      margin-top: -3rem;
+    }
   }
   &:hover {
     transform: translateY(-0.3rem);

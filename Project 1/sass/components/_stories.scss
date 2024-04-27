@@ -25,6 +25,10 @@
     width: 15rem;
     height: 15rem;
     float: left;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(-3deg) skewX(12deg);
+    border-radius: 50%;
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       // For the following polygon to work, the element must have set width and height + a float
       -webkit-shape-outside: circle(50% at 50% 50%);

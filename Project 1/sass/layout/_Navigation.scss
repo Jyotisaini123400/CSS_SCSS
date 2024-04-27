@@ -1,7 +1,8 @@
 .navigation {
   &_checkbox1 {
     display: none;
-    // position: absolute;
+    top: 3rem;
+    left: 3rem;
   }
   &_button {
     position: absolute;
@@ -9,8 +10,8 @@
     height: 4rem;
     width: 4rem;
     position: fixed;
-    top: 3rem;
-    left: 3rem;
+    top: 4rem;
+    left: 4rem;
     border-radius: 50%;
     box-shadow: 0 1rem 3rem rgba($black-color, 0.1);
     z-index: 2000;
@@ -35,13 +36,14 @@
   }
 
   &_background {
+    padding: 1.5rem;
     position: relative;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
     position: fixed;
-    top: 3rem;
-    left: 3rem;
+    top: 4rem;
+    left: 4rem;
     background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -160,10 +162,10 @@
       top: 0.8rem;
     }
   }
-  &_button:hover &_icon::before {
+  &_button:checked &_icon::before {
     top: -1rem;
   }
-  &_button:hover &_icon::after {
+  &_button:checked &_icon::after {
     top: 1rem;
   }
 }
