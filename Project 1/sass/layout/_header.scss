@@ -17,12 +17,27 @@
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+    background-image: linear-gradient(
+        to top left,
+        rgba($mideum-darkblue, 0.699),
+        rgba($blue-color, 0.705)
+      ),
+      url(../img/header2.avif);
+    width: 90%;
+    margin-left: 2.5rem;
   }
   @include respond(Tap-port) {
     background-size: cover;
-    height: 95vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    background-image: linear-gradient(
+        to top left,
+        rgba($mideum-darkblue, 0.699),
+        rgba($blue-color, 0.705)
+      ),
+      url(../img/header2.avif);
+    width: 70%;
+    margin-left: 2.5rem;
   }
   &_logo {
     position: absolute;

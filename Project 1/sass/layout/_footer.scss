@@ -75,13 +75,13 @@
     margin-bottom: 5rem;
     @include respond(Tab-port) {
       padding-top: 1rem;
-      margin-left: 5rem;
-      margin-top: -10rem;
+      margin-left: 4rem;
+      margin-top: -7rem;
     }
     @include respond(phone) {
       font-size: 0.9rem;
       padding-top: 1rem;
-      margin-left: 0rem;
+      margin-left: 4rem;
       margin-top: -5rem;
     }
   }
