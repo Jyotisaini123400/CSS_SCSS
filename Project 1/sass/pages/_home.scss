@@ -34,7 +34,14 @@
   & > * {
     transform: skewY(7deg);
   }
-
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+    background-image: linear-gradient(
+        to top left,
+        rgba($mideum-darkblue, 0.699),
+        rgba($blue-color, 0.705)
+      ),
+      url(../img/header1.jpg);
+  }
   @include respond(Tab-port) {
     padding: 10rem 0;
     margin-top: 30rem;

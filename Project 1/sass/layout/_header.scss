@@ -12,6 +12,16 @@
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (mix-width: 75em) {
+    background-image: linear-gradient(
+        to top left,
+        rgba($mideum-darkblue, 0.699),
+        rgba($blue-color, 0.705)
+      ),
+      url(../img/header2.avif);
+  }
+
   @include respond(phone) {
     height: 65vh;
     background-size: cover;
@@ -69,6 +79,7 @@
     }
     @include respond(phone) {
       top: 33%;
+      left: 46%;
     }
   }
   // @include respond(phone) {
