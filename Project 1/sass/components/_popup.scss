@@ -1,7 +1,7 @@
 .popup {
   background-color: rgba($black-color, 0.8);
-  height: 0vh;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -13,6 +13,14 @@
     -webkit-backdrop-filter: blur(10px);
     back-filter: blur(10px);
     background-color: rgba($black-color, 0.3);
+    @include respond(Tab-port) {
+      height: 100%;
+      width: 100%;
+    }
+    @include respond(phone) {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &:target {
@@ -25,23 +33,25 @@
   }
 
   &_content {
-    @include absCenter;
-
-    width: 75%;
+    width: 90vw;
     background-color: $white-color;
-
+    // height: 90vh;
     box-shadow: 0 2rem 4rem rgba($black-color, 0.2);
     display: table;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     transform: translate(-50%, -50%) scale(0.25);
     //First allow grey background to come in adn then allow content to come in.
     transition: all 0.4s 0.2s;
+    @include absCenter;
 
-    @include respond(tab-land) {
+    @include respond(Tab-land) {
       width: 95%;
     }
-    @include respond(tab-port) {
+    @include respond(Tab-port) {
+      width: 100%;
+    }
+    @include respond(phone) {
       width: 100%;
     }
   }

@@ -24,12 +24,14 @@
   &_shape {
     width: 15rem;
     height: 15rem;
+    margin-left: -8rem;
     float: left;
     overflow: hidden;
     position: relative;
     transform: translateX(-3deg) skewX(12deg);
     border-radius: 50%;
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      margin-left: -2rem;
       // For the following polygon to work, the element must have set width and height + a float
       -webkit-shape-outside: circle(50% at 50% 50%);
       shape-outside: circle(50% at 50% 50%);
@@ -42,12 +44,13 @@
     @include respond(Tab-port) {
       width: 10rem;
       height: 10rem;
-      margin-left: 3rem;
+      margin-left: -3rem;
     }
     @include respond(phone) {
       width: 5rem;
       height: 5rem;
       display: inline-block;
+      margin-left: -3rem;
     }
   }
   &_persion-1 {

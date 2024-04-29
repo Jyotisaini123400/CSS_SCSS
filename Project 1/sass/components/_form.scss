@@ -18,16 +18,16 @@
     border: none;
     font-family: inherit;
     border-bottom: 3px solid transparent;
-    width: 100%;
+    width: 80%;
     display: block;
     transition: all 0.3s;
     @include respond(Tab-port) {
-      width: 100%;
+      width: 80%;
       margin-left: 6rem;
     }
     @include respond(Tab-land) {
       width: 70%;
-      margin-left: 1rem;
+      margin-left: 4rem;
     }
     @include respond(phone) {
       width: 60%;
@@ -71,9 +71,10 @@
   &_radio_group {
     width: 44%;
     display: inline-block;
+    margin-left: 1rem;
     @include respond(Tab-port) {
       width: 100%;
-      margin-left: 7rem;
+      margin-left: 5rem;
       margin-top: 2rem;
       display: inline-block;
     }
@@ -135,7 +136,7 @@
     opacity: 1;
   }
   &_radio_input {
-    margin-left: -5rem;
+    margin-left: 0rem;
     justify-content: space-between;
     @include respond(Tab-port) {
       left: -4.9rem;

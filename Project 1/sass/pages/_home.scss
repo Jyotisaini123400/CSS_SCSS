@@ -141,8 +141,8 @@
       url(../img/book.webp);
   }
   &_form {
-    padding: 5rem;
-    width: 50%;
+    padding: 2rem;
+    width: 60%;
     @include respond(Tab-land) {
       width: 65%;
     }
