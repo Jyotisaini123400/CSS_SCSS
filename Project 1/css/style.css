@@ -701,7 +701,7 @@ body {
   @supports (-webkit-backdrop-filter: blur(10px)) or (back-filter: blur(10px)) {
     .popup {
       -webkit-backdrop-filter: blur(10px);
-      back-filter: blur(10px);
+      backdrop-filter: blur(10px);
       background-color: rgba(0, 0, 0, 0.3); }
       @media (max-width: 56.25em) {
         .popup {
@@ -1233,13 +1233,13 @@ body {
       background-size: cover;
       display: inline-block;
       background-image: linear-gradient(to top left, rgba(17, 17, 107, 0.699), rgba(18, 152, 197, 0.705)), url(../img/header1.jpg); } }
-
-@media (max-width: 37.5em) {
-  margin-left: 2.5rem;
-  width: 90%;
-  padding: 3rem;
-  display: inline-block;
-  background-image: linear-gradient(to top left, rgba(17, 17, 107, 0.699), rgba(18, 152, 197, 0.705)), url(../img/header1.jpg); }
+  @media (max-width: 37.5em) {
+    .section-features {
+      margin-left: 2.5rem;
+      width: 90%;
+      padding: 3rem;
+      display: inline-block;
+      background-image: linear-gradient(to top left, rgba(17, 17, 107, 0.699), rgba(18, 152, 197, 0.705)), url(../img/header1.jpg); } }
 
 .section-tour {
   background-color: #f7f7f7;
