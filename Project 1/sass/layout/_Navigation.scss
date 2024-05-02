@@ -54,6 +54,11 @@
     width: 0;
     z-index: 1500;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.266, 1.55);
+    @include respond(phone) {
+      height: 80vh;
+      width: 80vw;
+      align-items: center;
+    }
   }
 
   &_list {
@@ -64,6 +69,12 @@
     list-style: none;
     text-align: center;
     width: 100%;
+    @include respond(phone) {
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      align-items: center;
+    }
   }
   &_item {
     margin: 1rem;
@@ -106,6 +117,19 @@
   &_checkbox:checked ~ &_nav {
     opacity: 1;
     width: 100%;
+    color: purple;
+    @include respond(phone) {
+      height: 80vh;
+      width: 80vw;
+      top: 40%;
+      align-items: center;
+    }
+    @include respond(Tab-port) {
+      height: 80vh;
+      width: 70vw;
+      top: 40%;
+      align-items: center;
+    }
   }
   //////////////
   //   /// navigation icon
