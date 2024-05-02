@@ -1,68 +1,49 @@
 .navigation {
-  &_checkbox1 {
+  &_checkbox {
     display: none;
-    top: 3rem;
-    left: 3rem;
   }
   &_button {
-    position: absolute;
     background-color: $white-color;
-    height: 4rem;
-    width: 4rem;
+    height: 6.5rem;
+    width: 6.5rem;
     position: fixed;
-    top: 4rem;
-    left: 4rem;
+    top: 5rem;
+    left: 5rem;
     border-radius: 50%;
     box-shadow: 0 1rem 3rem rgba($black-color, 0.1);
     z-index: 2000;
     text-align: center;
     cursor: pointer;
 
-    @include respond(phone) {
-      height: 4rem;
-      width: 4rem;
-      top: 3rem;
-      left: 3rem;
-      position: fixed;
-    }
     @include respond(Tab-port) {
-      height: 4rem;
-      width: 4rem;
       top: 4rem;
-      left: 4rem;
-
-      position: fixed;
+      right: 4rem;
+    }
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
     }
   }
 
   &_background {
-    padding: 1.5rem;
-    position: relative;
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     position: fixed;
-    top: 4rem;
-    left: 4rem;
+    top: 6rem;
+    left: 6rem;
     background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-    @include respond(phone) {
-      height: 2rem;
-      width: 2rem;
-      top: 3rem;
-      left: 3rem;
-      position: fixed;
-    }
-    @include respond(Tab-port) {
-      height: 4rem;
-      width: 4rem;
-      top: 4rem;
-      left: 4rem;
-
-      position: fixed;
-    }
     // transform: scale(100);
+    @include respond(Tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
   &_nav {
     height: 100vh;
@@ -73,6 +54,11 @@
     width: 0;
     z-index: 1500;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.266, 1.55);
+    @include respond(phone) {
+      height: 80vh;
+      width: 80vw;
+      align-items: center;
+    }
   }
 
   &_list {
@@ -83,6 +69,12 @@
     list-style: none;
     text-align: center;
     width: 100%;
+    @include respond(phone) {
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      align-items: center;
+    }
   }
   &_item {
     margin: 1rem;
@@ -119,32 +111,36 @@
   }
 
   //   //////////functionality
-
-  // &_background:hover {
-  //   transform: scale(100);
-  // }
-
-  // &_checkbox1:hover,
-  &_nav:hover {
-    background-image: radial-gradient(rgb(102, 102, 182), rgb(53, 92, 211));
+  &_checkbox:checked ~ &_background {
+    transform: scale(80);
+  }
+  &_checkbox:checked ~ &_nav {
     opacity: 1;
     width: 100%;
+    color: purple;
+    @include respond(phone) {
+      height: 80vh;
+      width: 80vw;
+      top: 40%;
+      align-items: center;
+    }
     @include respond(Tab-port) {
-      position: absolute;
-      font-size: 1.3em;
+      height: 80vh;
+      width: 70vw;
+      top: 40%;
+      align-items: center;
     }
   }
-
   //////////////
   //   /// navigation icon
   &_icon {
     position: relative;
-    margin-top: 2rem;
+    margin-top: 3rem;
     &,
     &::before,
     &::after {
-      width: 1.5rem;
-      height: 1px;
+      width: 3rem;
+      height: 2px;
       background-color: rgb(68, 67, 67);
       display: inline-block;
     }
@@ -162,10 +158,21 @@
       top: 0.8rem;
     }
   }
-  &_button:checked &_icon::before {
+  &_button:hover &_icon::before {
     top: -1rem;
   }
-  &_button:checked &_icon::after {
+  &_button:hover &_icon::after {
     top: 1rem;
+  }
+  &_checkbox:checked + &_button &_icon {
+    background-color: transparent;
+  }
+  &_checkbox:checked + &_button &_icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &_checkbox:checked + &_button &_icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }

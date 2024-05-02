@@ -174,7 +174,8 @@
   }
 
   ///////////////////////////RESPOND TAB-PORT ////////////////////////
-  @include respond(Tab-port) {
+  // @include respond(Tab-port) {
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     font-size: 1.4rem;
