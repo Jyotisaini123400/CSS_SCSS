@@ -34,6 +34,23 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh; }
 
+.logo {
+  height: 3.3rem; }
+
+.search {
+  height: 1rem; }
+  .search_icon {
+    height: 2rem;
+    width: 2rem; }
+
+.user-nav_icon {
+  height: 2.5rem;
+  width: 2.5rem; }
+
+.user-nav_user-photo {
+  height: 4.75rem;
+  width: 4.75rem; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
