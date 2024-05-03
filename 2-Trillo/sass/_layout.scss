@@ -18,10 +18,12 @@
 
 .sidebar {
   flex: 0 0 18%;
+  color: #fff;
   background-color: var(--color-grey-dark-3);
 }
 .content {
   display: flex;
+  height: 120vh;
 }
 
 .hotel-view {
