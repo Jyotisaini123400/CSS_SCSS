@@ -1,0 +1,37 @@
+:root {
+  --color-primary: #eb3f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(
+    to top right,
+    var(--color-primary-dark),
+    var(--color-primary-light)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
