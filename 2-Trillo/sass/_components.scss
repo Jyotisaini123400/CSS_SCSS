@@ -149,3 +149,87 @@
     fill: currentColor;
   }
 }
+///////////////////////////    Hotel view
+///-look
+.hotel-look {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  object-fit: cover;
+  justify-content: center;
+  flex-direction: column;
+  &_img {
+    display: flex;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    justify-content: center;
+    flex-direction: row;
+    height: 30vh;
+    margin-top: -48rem;
+    img {
+      height: 30vh;
+      margin-top: 1rem;
+      object-fit: cover;
+      width: 33.3333%;
+    }
+  }
+  .hotel-rate {
+    border: 2px solid black;
+    flex-direction: row;
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    background-color: var(--color-grey-light-1);
+    &_box {
+      justify-content: space-between;
+
+      flex-direction: row;
+      margin-left: 1rem;
+
+      h1 {
+        color: var(--color-grey-dark-2);
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        display: inline-flex;
+        margin-right: 2rem;
+      }
+    }
+    &_icon {
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color-primary);
+    }
+  }
+  .hotel-location {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &_item {
+      position: relative;
+    }
+
+    &_item:active::before {
+      color: var(--color-primary-light);
+    }
+    &_link:link,
+    &_link:visited {
+      color: var(--color-grey-light-1);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    &_icon {
+      height: 4rem;
+    }
+  }
+}
+///////Heading-1
