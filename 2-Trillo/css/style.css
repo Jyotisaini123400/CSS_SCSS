@@ -10,7 +10,7 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #242222;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0,0,0,0.06);
+  --shadow-light: 0 2rem 5rem rgba(19, 18, 18, 0.06);
   --line: 1px solid var(--color-grey-light-2); }
 
 * {
@@ -48,6 +48,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
   .search_input {
     font-size: inherit;
     font-family: inherit;
@@ -121,6 +126,10 @@ body {
   margin-top: 3.5rem;
   list-style: none;
   font-size: 1.6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav_item {
     position: relative; }
     .side-nav_item:not(:last-child) {
@@ -181,17 +190,42 @@ body {
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4); }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
   .gallery__item {
-    height: 18rem;
-    width: 100%;
     display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__item {
+        width: 36.7rem;
+        height: 19rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .gallery__item {
+        width: 25.2rem;
+        height: 18rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .gallery__item {
+        width: 21rem;
+        height: 18rem; } }
   .gallery__photo {
     width: 32.7rem;
     height: 18rem;
     display: block; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__photo {
+        width: 36.7rem;
+        height: 19rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .gallery__photo {
+        width: 25.2rem;
+        height: 18rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .gallery__photo {
+        width: 21rem;
+        height: 18rem; } }
 
 .overview {
   border-bottom: var(--line);
@@ -290,27 +324,60 @@ body {
     transform: scale(1);
     box-shadow: none; } }
 
+.detail {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  flex: 0 0 90%;
+  margin-right: 4.5rem;
+  margin-top: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
+  @media only screen and (max-widh: 75em) {
+    .detail {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
+
 .detail_per {
-  display: flex;
-  margin-top: 2rem;
-  flex-direction: column;
-  border: 2px solid black;
-  margin-right: 2rem; }
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 1rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  margin-top: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .detail_per {
+      padding: 1rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail_per {
+      margin-right: 0;
+      margin-bottom: 1rem; } }
   .detail_per p {
     font-size: 1.7rem; }
 
 .main-p {
   display: flex;
   margin-top: 0.3rem; }
+  .main-p span {
+    color: #4e4c4c; }
 
 .detail-1 {
   display: flex;
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  width: 100%;
+  margin-top: -1rem; }
 
 .detail-2 {
   display: flex;
-  margin-left: 15rem;
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  width: 100%; }
 
 .detail-head {
   list-style: none; }
@@ -323,9 +390,23 @@ body {
 .message {
   flex-direction: row; }
   .message p {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    color: #3a3939; }
   .message_user {
-    display: flex; }
+    display: flex;
+    margin-left: -1rem; }
+    .message_user-link {
+      color: var(--color-primary);
+      margin-left: 6rem;
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      padding: 1rem;
+      width: 100px;
+      display: flex; }
+      .message_user-link:hover {
+        background-color: var(--color-primary-light);
+        color: white;
+        transition: all 0.2s; }
     .message_user-photo {
       height: 6.5rem;
       width: 6.5rem;
@@ -337,10 +418,66 @@ body {
     .message_user-day {
       margin: 4rem -3rem 0;
       margin-top: 3.4rem; }
+    .message_user-vote {
+      margin-left: 5rem;
+      color: var(--color-primary-light);
+      font-size: 2rem;
+      margin-top: 2.2rem; }
   .message-1 {
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light); }
   .message-2 {
-    margin-top: 4rem; }
+    margin-top: 2rem;
+    box-shadow: var(--shadow-light);
+    padding: 2rem; }
+
+.detail-people {
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-grey-light-1);
+  margin-top: 2rem;
+  margin-left: -2rem;
+  box-shadow: var(--shadow-light); }
+
+.detail-user-img {
+  display: flex;
+  flex-direction: row;
+  margin-right: -8rem; }
+  .detail-user-img .detail-user {
+    height: 7.5rem;
+    width: 7.5rem;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative; }
+    .detail-user-img .detail-user-1 {
+      left: 1rem; }
+    .detail-user-img .detail-user-2 {
+      left: -2rem; }
+    .detail-user-img .detail-user-3 {
+      left: -5rem; }
+    .detail-user-img .detail-user-4 {
+      left: -7rem; }
+  .detail-user-img .user-photo {
+    position: absolute;
+    height: 7rem;
+    width: 7rem;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid wheat;
+    margin-left: 1rem; }
+
+h2 {
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  display: flex; }
 
 .container {
   max-width: 120rem;
@@ -365,24 +502,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      flex-direction: 0 0 9%; } }
 
 .content {
   display: flex;
   height: 120vh; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .hotel-view {
   background-color: #fff;
-  flex: 1; }
+  flex: 1;
+  height: 100vh; }
 
 .detail {
+  width: 100%;
   display: flex;
-  padding: 4.5rem;
+  padding: 2rem;
+  height: 80%;
+  margin-top: -4rem;
   background-color: var(--color-grey-light-1);
-  border-bottom: var(--line);
   font-size: 1.4rem; }
   @media only screen and (max-width: 56.25em) {
     .detail {
-      padding: 3rem; } }
+      padding: 1rem; } }
   @media only screen and (max-width: 37.5em) {
     .detail {
       flex-direction: column; } }

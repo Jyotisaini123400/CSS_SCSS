@@ -12,6 +12,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: $breakpoint-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
   &_input {
     font-size: inherit;
     font-family: inherit;
@@ -104,10 +109,10 @@
   margin-top: 3.5rem;
   list-style: none;
   font-size: 1.6rem;
-  // @media only screen and (max-width: $breakpoint-medium) {
-  //   display: flex; //forces items to be side by side if screen is small
-  //   margin: 0;
-  // }
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: flex; //forces items to be side by side if screen is small
+    margin: 0;
+  }
   &_item {
     position: relative;
     &:not(:last-child) {
@@ -180,22 +185,48 @@
   padding: 2.5rem;
   color: var(--color-grey-light-4);
 
-  // @media only screen and (max-width: $breakpoint-medium) {
-  //   display: none;
-  // }
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 ///////////////////////////    Hotel view
 .gallery {
   display: flex;
   &__item {
-    height: 18rem;
-    width: 100%;
+    // height: 18rem;
+    // width: 100%;
     display: flex;
+    @media only screen and (max-width: $breakpoint-medium) {
+      width: 36.7rem;
+      height: 19rem;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      width: 25.2rem;
+      height: 18rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-smallest) {
+      width: 21rem;
+      height: 18rem;
+    }
   }
   &__photo {
     width: 32.7rem;
     height: 18rem;
     display: block; //prevent small space from showing up underneath
+    @media only screen and (max-width: $breakpoint-medium) {
+      width: 36.7rem;
+      height: 19rem;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      width: 25.2rem;
+      height: 18rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-smallest) {
+      width: 21rem;
+      height: 18rem;
+    }
   }
 }
 .overview {
@@ -217,7 +248,6 @@
   }
 
   &__stars {
-    //flex: 1; //this flex item should grow and occupy all available space
     margin-right: auto; //does same thing as above, but keeps actual width of element to a minimum
     display: flex; //removes small space underneath stars, which is there by default if the stars are treated like text
   }
@@ -345,12 +375,44 @@
 }
 /////////////details
 ///details-per
+.detail {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  flex: 0 0 90%;
+  margin-right: 4.5rem;
+  margin-top: 1rem;
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+  @media only screen and (max-widh: $breakpoint-largest) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
 .detail_per {
-  display: flex;
-  margin-top: 2rem;
-  flex-direction: column;
-  border: 2px solid black;
-  margin-right: 2rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 1rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  margin-top: 4rem;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 1rem;
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
   p {
     font-size: 1.7rem;
   }
@@ -358,22 +420,25 @@
 .main-p {
   display: flex;
   margin-top: 0.3rem;
+  span {
+    color: rgb(78, 76, 76);
+  }
 }
 .detail-1 {
   display: flex;
-  // margin-right: 2rem;
   font-size: 1.7rem;
+  width: 100%;
+  margin-top: -1rem;
 }
 .detail-2 {
   display: flex;
-  margin-left: 15rem;
   font-size: 1.7rem;
+  width: 100%;
 }
 .detail-head {
   list-style: none;
 }
-.detail-item {
-}
+// d
 .detail_icon {
   height: 1rem;
   width: 1rem;
@@ -383,14 +448,31 @@
 
 .message {
   flex-direction: row;
-  // &-1{
+  // margin-top: 1rem;
 
-  // }
   p {
     font-size: 1.4rem;
+    color: rgb(58, 57, 57);
   }
   &_user {
     display: flex;
+    margin-left: -1rem;
+    &-link {
+      color: var(--color-primary);
+      margin-left: 6rem;
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      width: 100px;
+      display: flex;
+
+      &:hover {
+        background-color: var(--color-primary-light);
+        color: white;
+        transition: all 0.2s;
+      }
+    }
     &-photo {
       height: 6.5rem;
       width: 6.5rem;
@@ -406,11 +488,77 @@
       margin: 4rem -3rem 0;
       margin-top: 3.4rem;
     }
+    &-vote {
+      margin-left: 5rem;
+      color: var(--color-primary-light);
+      font-size: 2rem;
+      margin-top: 2.2rem;
+    }
   }
   &-1 {
     margin-top: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
   }
   &-2 {
-    margin-top: 4rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
   }
+}
+
+.detail-people {
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-grey-light-1);
+  margin-top: 2rem;
+  margin-left: -2rem;
+  box-shadow: var(--shadow-light);
+}
+.detail-user-img {
+  display: flex;
+  flex-direction: row;
+  margin-right: -8rem;
+
+  .detail-user {
+    height: 7.5rem;
+    width: 7.5rem;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    &-1 {
+      left: 1rem;
+    }
+    &-2 {
+      left: -2rem;
+    }
+    &-3 {
+      left: -5rem;
+    }
+    &-4 {
+      left: -7rem;
+    }
+  }
+  .user-photo {
+    position: absolute;
+    height: 7rem;
+    width: 7rem;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid wheat;
+    margin-left: 1rem;
+  }
+}
+h2 {
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  // margin-bottom: -5rem;
 }
