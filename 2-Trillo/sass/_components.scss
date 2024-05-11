@@ -1,0 +1,564 @@
+/////////////////////////////
+/// logo
+.logo {
+  height: 3.3rem;
+  margin-left: 2rem;
+}
+
+/////////////////////////////
+/// search
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: $breakpoint-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+  &_input {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.25rem;
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-dark-3);
+    }
+  }
+  &_input:focus + &_button {
+    background-color: var(--color-grey-light-3);
+  }
+  &_button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateX(2px);
+    }
+  }
+  &_icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+  }
+}
+/////////////////////////////
+/// nav
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+  &_icon-box {
+    position: relative;
+  }
+  &_icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-grey-dark-2);
+  }
+  &_notification {
+    font-size: 0.8rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    position: absolute;
+    color: #fff;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &_user-photo {
+    height: 4.75rem;
+    width: 4.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+}
+/////////////////SIDE-NAVIGATION
+/// SIDE-NAV
+.side-nav {
+  margin-top: 3.5rem;
+  list-style: none;
+  font-size: 1.6rem;
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: flex; //forces items to be side by side if screen is small
+    margin: 0;
+  }
+  &_item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+      @media only screen and (max-width: $breakpoint-medium) {
+        margin-bottom: 0; //remove margin when nav bar is horizontal
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex: 1; //max growth
+    }
+  }
+
+  &_item::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+  }
+  &_item:hover::before,
+  &_item--active::before {
+    width: 100%;
+    transform: scaleY(1);
+  }
+  &_item:active::before {
+    background-color: var(--color-primary-light);
+  }
+  &_link:link,
+  &_link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    @media only screen and (max-width: $breakpoint-medium) {
+      justify-content: center; //center text when horizontal bar
+      padding: 2rem;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
+  }
+  &_icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor;
+    @media only screen and (max-width: $breakpoint-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-light-4);
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
+}
+///////////////////////////    Hotel view
+.gallery {
+  display: flex;
+  &__item {
+    // height: 18rem;
+    // width: 100%;
+    display: flex;
+    @media only screen and (max-width: $breakpoint-medium) {
+      width: 36.7rem;
+      height: 19rem;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      width: 25.2rem;
+      height: 18rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-smallest) {
+      width: 21rem;
+      height: 18rem;
+    }
+  }
+  &__photo {
+    width: 32.7rem;
+    height: 18rem;
+    display: block; //prevent small space from showing up underneath
+    @media only screen and (max-width: $breakpoint-medium) {
+      width: 36.7rem;
+      height: 19rem;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      width: 25.2rem;
+      height: 18rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-smallest) {
+      width: 21rem;
+      height: 18rem;
+    }
+  }
+}
+.overview {
+  border-bottom: var(--line);
+  display: flex;
+  align-items: center;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  &__stars {
+    margin-right: auto; //does same thing as above, but keeps actual width of element to a minimum
+    display: flex; //removes small space underneath stars, which is there by default if the stars are treated like text
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    font-size: 1.2rem;
+
+    //ensure location pin and location name are aligned using flex
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-location {
+    margin-right: 0.25rem;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    align-self: stretch; //override center alignment to make stretch
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding: 0.5rem;
+    }
+  }
+}
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor; //ensure border has same color as text
+  background-color: transparent;
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite; //infinite keyword
+  }
+}
+
+//infinite animation
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); //x-offset, y-offset, blur, color/transparency
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+//infinite animation
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); //x-offset, y-offset, blur, color/transparency
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+/////////////details
+///details-per
+.detail {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  flex: 0 0 90%;
+  margin-right: 4.5rem;
+  margin-top: 1rem;
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+  @media only screen and (max-widh: $breakpoint-largest) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.detail_per {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 1rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  margin-top: 4rem;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 1rem;
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+}
+.main-p {
+  display: flex;
+  margin-top: 0.3rem;
+  span {
+    color: rgb(78, 76, 76);
+  }
+}
+.detail-1 {
+  display: flex;
+  font-size: 1.7rem;
+  width: 100%;
+  margin-top: -1rem;
+}
+.detail-2 {
+  display: flex;
+  font-size: 1.7rem;
+  width: 100%;
+}
+.detail-head {
+  list-style: none;
+}
+// d
+.detail_icon {
+  height: 1rem;
+  width: 1rem;
+  fill: var(--color-primary-light);
+}
+//Message
+
+.message {
+  flex-direction: row;
+  // margin-top: 1rem;
+
+  p {
+    font-size: 1.4rem;
+    color: rgb(58, 57, 57);
+  }
+  &_user {
+    display: flex;
+    margin-left: -1rem;
+    &-link {
+      color: var(--color-primary);
+      margin-left: 6rem;
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      width: 100px;
+      display: flex;
+
+      &:hover {
+        background-color: var(--color-primary-light);
+        color: white;
+        transition: all 0.2s;
+      }
+    }
+    &-photo {
+      height: 6.5rem;
+      width: 6.5rem;
+      border-radius: 50%;
+    }
+    &-name {
+      display: flex;
+      margin-left: 1rem;
+      margin-top: 1.2rem;
+      // margin-bottom: 5rem;
+    }
+    &-day {
+      margin: 4rem -3rem 0;
+      margin-top: 3.4rem;
+    }
+    &-vote {
+      margin-left: 5rem;
+      color: var(--color-primary-light);
+      font-size: 2rem;
+      margin-top: 2.2rem;
+    }
+  }
+  &-1 {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+  }
+  &-2 {
+    margin-top: 2rem;
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+  }
+}
+
+.detail-people {
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-grey-light-1);
+  margin-top: 2rem;
+  margin-left: -2rem;
+  box-shadow: var(--shadow-light);
+}
+.detail-user-img {
+  display: flex;
+  flex-direction: row;
+  margin-right: -8rem;
+
+  .detail-user {
+    height: 7.5rem;
+    width: 7.5rem;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    &-1 {
+      left: 1rem;
+    }
+    &-2 {
+      left: -2rem;
+    }
+    &-3 {
+      left: -5rem;
+    }
+    &-4 {
+      left: -7rem;
+    }
+  }
+  .user-photo {
+    position: absolute;
+    height: 7rem;
+    width: 7rem;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid wheat;
+    margin-left: 1rem;
+  }
+}
+h2 {
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  // margin-bottom: -5rem;
+}
